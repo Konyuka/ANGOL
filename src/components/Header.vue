@@ -1,6 +1,7 @@
 <template>
  
-<header class="bg-gray-300 z-50 fixed top-0 inset-x-0">
+<header class="bg-white z-50 fixed top-0 inset-x-0">
+  <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 mix-blend-multiply"></div>
   <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:divide-y lg:divide-gray-700 lg:px-8">
     <div class="relative h-16 flex justify-between">
 
@@ -20,7 +21,7 @@
                 <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
               </svg>
             </div>
-            <input id="search" name="search" class="ring-2 ring-gray-100 font-primary-font block w-full bg-gray-300 border border-transparent rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 focus:placeholder-gray-500 sm:text-sm" placeholder="Search" type="search">
+            <input id="search" name="search" class="ring-2 ring-gray-400 focus:ring-gray-500 font-primary-font block w-full bg-gray-300 border border-transparent rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 focus:placeholder-gray-500 sm:text-sm" placeholder="Search" type="search">
           </div>
         </div>
       </div>
@@ -53,16 +54,16 @@
       </div>
 
       <div class="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
-        <button type="button" class="bg-blue-300 transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse active:animate-ping mr-4 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white outline-black ring-2 ring-offset-2 ring-offset-gray-300 ring-white">
-          <i class="fab fa-facebook fa-2x p-1"></i>
+        <button type="button" class="bg-cyan-200 transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse active:animate-ping mr-4 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-gray-600 outline-black ring-2 ring-offset-2 ring-offset-gray-300 ring-white">
+          <i class="fab fa-facebook fa-2x p-1 "></i>
         </button>
-        <button type="button" class="bg-blue-300 transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse active:animate-ping mr-4 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white outline-black  ring-2 ring-offset-2 ring-offset-gray-300 ring-white">
+        <button type="button" class="bg-cyan-200 transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse active:animate-ping mr-4 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-gray-600 outline-black  ring-2 ring-offset-2 ring-offset-gray-300 ring-white">
           <i class="fab fa-instagram fa-2x p-1"></i>
         </button>
-        <button type="button" class="bg-blue-300 transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse active:animate-ping mr-4 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white outline-black  ring-2 ring-offset-2 ring-offset-gray-300 ring-white">
+        <button type="button" class="bg-cyan-200 transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse active:animate-ping mr-4 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-gray-600 outline-black  ring-2 ring-offset-2 ring-offset-gray-300 ring-white">
           <i class="fab fa-twitter fa-2x p-1"></i>
         </button>
-        <button type="button" class="bg-blue-300 transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse active:animate-ping flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white outline-black  ring-2 ring-offset-2 ring-offset-gray-300 ring-white">
+        <button type="button" class="bg-cyan-200 transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse active:animate-ping flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-gray-600 outline-black  ring-2 ring-offset-2 ring-offset-gray-300 ring-white">
           <i class="fab fa-google fa-2x p-1"></i>
         </button>
 
@@ -72,18 +73,22 @@
     <nav class="hidden lg:py-4 lg:flex lg:space-x-8" aria-label="Global">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
       <a href="#" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 font-heading-font text-black hover:text-white rounded-md py-1 px-3 inline-flex items-center text-xl font-bold " aria-current="page">
+        <i class="fas fa-home mr-2"></i>
         Home
       </a>
 
       <a href="#" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
-        About
-      </a>
-
-      <a href="#" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
+        <i class="fas fa-briefcase mr-2"></i>
         Services
       </a>
 
       <a href="#" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
+        <i class="fas fa-question-circle mr-2"></i>
+        About
+      </a>
+
+      <a href="#" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
+        <i class="fas fa-envelope-open-text mr-2"></i>
         Contact Us
       </a>
     </nav>
