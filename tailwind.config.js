@@ -10,8 +10,12 @@ module.exports = {
     },
   },
   variants: {
+    translate: ({ after }) => after(['group-hover']),
     extend: {
-      animation: ['hover', 'focus'],
+      animation: ['hover', 'focus', 'active'],
+      translate: ['responsive', 'hover', 'focus'],
+      backgroundBlendMode: ['hover', 'focus'],
+      display: ["responsive", "group-hover", "group-focus"],
     },
   },
   plugins: [

@@ -20,7 +20,7 @@
                 <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
               </svg>
             </div>
-            <input id="search" name="search" class="block w-full bg-gray-300 border border-transparent rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 focus:placeholder-gray-500 sm:text-sm" placeholder="Search" type="search">
+            <input id="search" name="search" class="focus:ring-4 focus:ring-blue-300  font-primary-font block w-full bg-gray-300 border border-transparent rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 focus:placeholder-gray-500 sm:text-sm" placeholder="Search" type="search">
           </div>
         </div>
       </div>
@@ -53,37 +53,37 @@
       </div>
 
       <div class="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
-        <button type="button" class="bg-blue-300 hover:animate-ping mr-3 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+        <button type="button" class="bg-blue-300 transform transition hover:scale-125 duration-300 ease-in-out hover:animate-pulse active:animate-ping mr-3 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
           <i class="fab fa-facebook fa-2x p-1"></i>
         </button>
-        <button type="button" class="bg-blue-300 hover:animate-ping mr-3 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+        <button type="button" class="bg-blue-300 transform transition hover:scale-125 duration-300 ease-in-out hover:animate-pulse active:animate-ping mr-3 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
           <i class="fab fa-instagram fa-2x p-1"></i>
         </button>
-        <button type="button" class="bg-blue-300 hover:animate-ping mr-3 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+        <button type="button" class="bg-blue-300 transform transition hover:scale-125 duration-300 ease-in-out hover:animate-pulse active:animate-ping mr-3 flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
           <i class="fab fa-twitter fa-2x p-1"></i>
         </button>
-        <button type="button" class="bg-blue-300  flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+        <button type="button" class="bg-blue-300 transform transition hover:scale-125 duration-300 ease-in-out hover:animate-pulse active:animate-ping flex-shrink-0 rounded-full p-1 text-purple-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
           <i class="fab fa-google fa-2x p-1"></i>
         </button>
 
       </div>
     </div>
 
-    <nav class="hidden lg:py-2 lg:flex lg:space-x-8" aria-label="Global">
+    <nav class="hidden lg:py-4 lg:flex lg:space-x-8" aria-label="Global">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="#" class="bg-gray-900 font-heading-font text-white rounded-md py-2 px-3 inline-flex items-center text-xl font-extrabold " aria-current="page">
+      <a href="#" class="transform transition hover:scale-125 duration-300 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-300 hover:from-blue-300 hover:to-purple-500 font-heading-font text-black hover:text-white rounded-md py-1 px-3 inline-flex items-center text-xl font-bold " aria-current="page">
         Home
       </a>
 
-      <a href="#" class="text-gray-300 font-heading-font hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-xl font-extrabold ">
+      <a href="#" class="transform transition hover:scale-125 duration-300 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-300 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
         About
       </a>
 
-      <a href="#" class="text-gray-300 font-heading-font hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-xl font-extrabold ">
+      <a href="#" class="transform transition hover:scale-125 duration-300 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-300 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
         Services
       </a>
 
-      <a href="#" class="text-gray-300 font-heading-font hover:bg-gray-700 hover:text-white rounded-md py-2 px-3 inline-flex items-center text-xl font-extrabold ">
+      <a href="#" class="transform transition hover:scale-125 duration-300 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-300 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
         Contact Us
       </a>
     </nav>
