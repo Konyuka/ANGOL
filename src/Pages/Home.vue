@@ -1,21 +1,25 @@
 <template>
-<div class="bg-white mt-20">
+<div class="bg-white mt-20" data-scroll-container>
   <div class="relative overflow-hidden">
     
     <main>
+      <section data-scroll-section>
       <div class="pt-10 bg-gradient-to-r from-gray-100 to-gray-200 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
-        <div class="mx-auto max-w-7xl lg:px-8">
+        <div data-scroll data-scroll-speed="4" class="mx-auto max-w-7xl lg:px-8">
           <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+
             <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
 
               <div class="lg:py-12">
                 
                 <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                   <span class="uppercase block font-heading-font text-8xl pb-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-purple-900">Angol <span class=" text-transparent bg-clip-text bg-gradient-to-br from-gray-300 to-gray-500">Media</span> </span>
-                  <span class="text-md font-heading-font pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-500 sm:pb-5">Grow Your Brand</span>
+                  <span data-scroll data-scroll-speed="1" class="text-md font-heading-font pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-500 sm:pb-5">Grow Your Brand</span>
                 </h1>
 
                 <h1 class="font-heading-font text-gray-500 mb-1">Greetings and welcome to our website, </h1>
+
+                <!-- <button @click="check" class="text-black"> Ya CLick Me </button> -->
 
                 <p class="font-primary-font text-gray-800 sm:text-sm font-extralight lg:text-md xl:text-lg">
                   ANGOL MEDIA is a provider of advertising and media services headquarted in Nairobi, Kenya with a presence in Kigali, Rwanda. <br> <br>
@@ -25,22 +29,27 @@
 
               </div>
             </div>
-            <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+
+            <div data-scroll data-scroll-speed="6" class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
               <div class="mx-auto max-w-md px-1 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                 <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
                 <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="../assets/img/business.svg" alt="">
                 <!-- <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/cloud-illustration-teal-cyan.svg" alt=""> -->
               </div>
             </div>
+
           </div>
         </div>
       </div>
+      </section>
+
 
     
 
       <!-- Feature section with grid -->
-      <div class="relative bg-gray-100 py-16 sm:py-24 lg:py-24">
-        <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+      <section data-scroll-section id="services" >
+      <div class="relative bg-gradient-to-r from-gray-100 to-gray-200 py-16 sm:py-24 lg:py-24">
+        <div data-scroll data-scroll-speed="4" class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
           <h2 class="font-heading-font font-extrabold  tracking-wider uppercase text-7xl text-transparent bg-clip-text bg-gradient-to-br from-gray-200 to-gray-400">Our Services</h2>
           <!-- <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
             Everything you need to deploy your app
@@ -204,18 +213,20 @@
           </div>
         </div>
       </div>
+       </section>
 
   
 
       <!-- CTA Section -->
+      <section data-scroll-section>
       <div class="relative bg-gray-900">
 
-        <div class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+        <div data-scroll data-scroll-speed="4" class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
           <img class="w-full h-full object-cover" src="../assets/img/marketing.jpg" alt="">
           <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600 mix-blend-multiply"></div>
         </div>
 
-        <div class="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
+        <div data-scroll data-scroll-speed="4" class="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
           <div class="md:ml-auto md:w-1/2 md:pl-10">
             <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">
               Award winning support
@@ -240,12 +251,16 @@
             </div>
           </div>
         </div>
-
+ 
       </div>
+      </section>
+
     </main>
-    <footer class="bg-gray-50" aria-labelledby="footer-heading">
+
+    <section data-scroll-section>
+    <footer id="foota" class="bg-gradient-to-r from-gray-100 to-gray-200" aria-labelledby="footer-heading">
       <h2 id="footer-heading" class="sr-only">Footer</h2>
-      <div class="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
+      <div data-scroll data-scroll-speed="4" class="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div class="space-y-8 xl:col-span-1">
             <img class="h-10" src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg" alt="Company name">
@@ -423,14 +438,88 @@
         </div>
       </div>
     </footer>
+    </section>
+
   </div>
 </div>
 
 </template>
 
 <script>
+import { onMounted, onUpdated, onUnmounted } from 'vue'
+import LocomotiveScroll from 'locomotive-scroll';
+
+
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('[data-scroll-container]'),
+//     smooth: true
+// });
+// alert('ya')
+
+
+// this.scroll = new LocomotiveScroll({
+//     el: document.querySelector('[data-scroll-container]'),
+//     smooth: true
+// });
+
+
+// var scroll = new LocomotiveScroll({
+//     el: document.querySelector('[data-scroll-container]'),
+//     smooth: true
+// });
+
+
 export default {
   name: 'HomePage',
+  setup() {
+
+    // var scroll = new LocomotiveScroll({
+    //     el: document.querySelector('[data-scroll-container]'),
+    //     smooth: true
+    // });
+    onMounted(() => {
+      // window.addEventListener('scroll', this.handleScroll);
+      // document.addEventListener('scroll', this.handleScroll)
+
+       const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+        });
+
+    })
+   
+
+    const check = () => {
+      const scroll = new LocomotiveScroll(
+        {
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true
+        }
+      );
+      const target = document.querySelector('#foota');
+      scroll.scrollTo(target);
+    }
+
+    // const handleScroll = (event) => {
+    //   console.log(event)
+    // } 
+
+    // let handleScroll = '' 
+
+    return {
+      scroll,
+      check,
+      // handleScroll,
+    }
+    
+  },
+ 
   
 }
 </script>
+
+<style scoped>
+/* section{
+  height: 100vh;
+} */
+</style>

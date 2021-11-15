@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
+import './locomotive.css'
 import router from "./router/index"
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -16,5 +17,15 @@ dom.watch();
 
 const app = createApp(App);
 app.component("font-awesome-icon", FontAwesomeIcon);
+
+
+
+// import LocomotiveScroll from 'locomotive-scroll';
+// const scroll = new LocomotiveScroll(
+//     {
+//         el: document.querySelector('[data-scroll-container]'),
+//         smooth:true
+//     }
+// );
 
 createApp(App).use(router).mount('#app')

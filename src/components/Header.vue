@@ -77,7 +77,7 @@
         Home
       </a>
 
-      <a href="#" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
+      <a @click="Services" href="#" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
         <i class="fas fa-briefcase mr-2"></i>
         Services
       </a>
@@ -140,7 +140,29 @@
 </template>
 
 <script>
+import LocomotiveScroll from 'locomotive-scroll';
+
 export default {
   name: 'NavBar',
+  setup(){
+
+
+    const Services = () => {
+      const scroll = new LocomotiveScroll(
+        {
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true
+        }
+      );
+      const target = document.querySelector('#services');
+      scroll.scrollTo(target);
+    }
+
+    return {
+      Services,
+
+    }
+
+  }
 }
 </script>

@@ -15,6 +15,9 @@ export default {
   components: {
     Header,
     Footer
+  },
+  setup() {
+    
   }
 }
 </script>
