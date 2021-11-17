@@ -3,7 +3,8 @@
 <header class="bg-white z-50 fixed top-0 inset-x-0">
   <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 mix-blend-multiply"></div>
   <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:divide-y lg:divide-gray-700 lg:px-8">
-    <div class="relative h-16 flex justify-between">
+
+    <div :class="{ 'hidden': !showNavbar }" class="relative h-16 flex justify-between">
 
       <div class="relative z-10 px-2 flex lg:px-0">
         <div class="flex-shrink-0 flex items-center">
@@ -141,11 +142,18 @@
 
 <script>
 import LocomotiveScroll from 'locomotive-scroll';
+import { onMounted, onUpdated, onUnmounted, ref, computed } from 'vue'
 
 export default {
   name: 'NavBar',
+  props: ['showNavbar', 'propValue'],
   setup(){
 
+    // const showNavbar = ref (props.showNavbar)
+
+    // const showNavbar = computed(() => {
+    //   return props.showNavbar
+    // });
 
     const Services = () => {
       const scroll = new LocomotiveScroll(
@@ -156,11 +164,11 @@ export default {
       );
       const target = document.querySelector('#services');
       scroll.scrollTo(target);
-    }
+    };
 
     return {
       Services,
-
+      // showNavbar,
     }
 
   }

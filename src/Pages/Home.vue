@@ -1,8 +1,12 @@
 <template>
-<div class="bg-white mt-20" data-scroll-container>
-  <div class="relative overflow-hidden">
+
+<div class="bg-white" data-scroll-container>
+  <Header :propValue="propValue" :showNavbar="showNavbar" class="transition duration-700 ease-in-out transform hover:translate-y-1 motion-reduce:transition-none motion-reduce:transform-none" />
+
+  <div class="relative overflow-hidden mt-14">
     
     <main>
+
       <section data-scroll-section>
       <div class="pt-10 bg-gradient-to-r from-gray-100 to-gray-200 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
         <div data-scroll data-scroll-speed="4" class="mx-auto max-w-7xl lg:px-8">
@@ -43,9 +47,6 @@
       </div>
       </section>
 
-
-    
-
       <!-- Feature section with grid -->
       <section data-scroll-section id="services" >
       <div class="relative bg-gradient-to-r from-gray-100 to-gray-200 py-16 sm:py-24 lg:py-24">
@@ -58,7 +59,7 @@
 
           </p>
           <div class="mt-12">
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div data-scroll-call="baby()" data-scroll-repeat="true" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
               <div class="pt-6">
                 <a href="">
@@ -441,54 +442,57 @@
     </section>
 
   </div>
+
+  <Footer />
 </div>
 
 </template>
 
 <script>
-import { onMounted, onUpdated, onUnmounted } from 'vue'
+import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
+import { onMounted, onUpdated, onUnmounted, computed, ref, watch } from 'vue'
 import LocomotiveScroll from 'locomotive-scroll';
-
-
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('[data-scroll-container]'),
-//     smooth: true
-// });
-// alert('ya')
-
-
-// this.scroll = new LocomotiveScroll({
-//     el: document.querySelector('[data-scroll-container]'),
-//     smooth: true
-// });
-
-
-// var scroll = new LocomotiveScroll({
-//     el: document.querySelector('[data-scroll-container]'),
-//     smooth: true
-// });
-
 
 export default {
   name: 'HomePage',
-  setup() {
+  components: {
+    Header,
+    Footer
+  },
+  // props: [showNavba],
+  setup(props) {
+    console.log(props.showNavbar)
+    
+    const initY = ref('')
+    const showNavbar = ref(true)
+    const propValue = ref('This is the prop value')
 
-    // var scroll = new LocomotiveScroll({
-    //     el: document.querySelector('[data-scroll-container]'),
-    //     smooth: true
-    // });
+    watch(initY, () => {
+      onScroll() 
+    } )
+
     onMounted(() => {
-      // window.addEventListener('scroll', this.handleScroll);
-      // document.addEventListener('scroll', this.handleScroll)
-
        const scroll = new LocomotiveScroll({
             el: document.querySelector('[data-scroll-container]'),
             smooth: true,
         });
-
+        scroll.on('scroll', (e) => {
+            initY.value = e.scroll.y
+        });
+        console.log(scroll)
     })
-   
 
+
+    const onScroll = () => {
+      if(initY.value < 109){
+        showNavbar.value = true;
+      }else{
+        showNavbar.value = false;
+        // alert('radar chafu')
+      }
+    };
+   
     const check = () => {
       const scroll = new LocomotiveScroll(
         {
@@ -500,16 +504,14 @@ export default {
       scroll.scrollTo(target);
     }
 
-    // const handleScroll = (event) => {
-    //   console.log(event)
-    // } 
-
-    // let handleScroll = '' 
-
     return {
       scroll,
       check,
-      // handleScroll,
+      onScroll,
+      showNavbar,
+      initY,
+      propValue,
+
     }
     
   },
@@ -519,7 +521,14 @@ export default {
 </script>
 
 <style scoped>
-/* section{
-  height: 100vh;
-} */
+.invisible{
+ opacity: 0;
+ transition: opacity 5s;  
+}
+.visible{
+  opacity: 1;
+}
+.smooth{
+  transition: 4s all ease-out;
+}
 </style>

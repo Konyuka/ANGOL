@@ -17,6 +17,7 @@ module.exports = {
       },
       animation: {
         'bounce-slow': 'spin 1s linear infinite;',
+        fade: 'fadeOut 5s ease-in-out'
       }
     },
   },
@@ -27,6 +28,7 @@ module.exports = {
       translate: ['responsive', 'hover', 'focus', "group-hover"],
       backgroundBlendMode: ['hover', 'focus', "group-hover"],
       display: ["responsive", "group-hover", "group-focus"],
+      transitionDuration: ['hover', 'focus'],
     },
   },
   plugins: [
