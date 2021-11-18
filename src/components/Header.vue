@@ -1,6 +1,6 @@
 <template>
  
-<header class="bg-white z-50 fixed top-0 inset-x-0">
+<header class="bg-white z-10 fixed top-0 inset-x-0">
   <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 mix-blend-multiply"></div>
   <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:divide-y lg:divide-gray-700 lg:px-8">
 
