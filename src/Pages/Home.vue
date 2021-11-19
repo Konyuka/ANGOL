@@ -48,7 +48,7 @@
       <section data-scroll-section id="services" >
       <div class="relative bg-gradient-to-r from-gray-100 to-gray-200 py-16 sm:py-24 lg:py-2">
         <div data-scroll data-scroll-speed="4" class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-          <h2 class="font-heading-font font-extrabold  tracking-wider uppercase text-7xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-800 to-gray-400">Our Services</h2>
+          <h2 data-scroll data-scroll-speed="2" class="font-heading-font font-extrabold  tracking-wider uppercase text-7xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-800 to-gray-400">Our Services</h2>
           <!-- <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
             Everything you need to deploy your app
           </p> -->
