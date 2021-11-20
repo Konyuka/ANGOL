@@ -34,52 +34,50 @@
             <h2 class="sr-only" id="contact-heading">Contact us</h2>
             <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
 
-              <div class="flex flex-col bg-white rounded-2xl shadow-xl">
+              <div class="flex flex-col bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl shadow-2xl">
                 <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8">
                   <div class="absolute top-0 p-5 inline-block bg-blue-600 rounded-xl shadow-lg transform -translate-y-1/2">
-                    <!-- Heroicon name: outline/phone -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
+                    <svg class="h-9 w-9" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.676 9.18c-1.426-.009-3.217.764-4.583 2.13-.521.521-.979 1.129-1.333 1.812 1.232-.933 2.547-1.225 4.086-.361.453-1.199 1.056-2.418 1.83-3.581zm8.154 8.143c-1.264.826-2.506 1.422-3.581 1.842.863 1.54.571 2.853-.361 4.085.684-.353 1.291-.812 1.812-1.334 1.37-1.369 2.144-3.165 2.13-4.593zm5.127-13.288c-.344-.024-.681-.035-1.011-.035-7.169 0-11.249 5.465-12.733 9.86l3.939 3.94c4.525-1.62 9.848-5.549 9.848-12.642 0-.366-.014-.74-.043-1.123zm-8.24 8.258c-.326-.325-.326-.853 0-1.178.325-.326.853-.326 1.178 0 .326.326.326.853 0 1.178-.326.326-.853.326-1.178 0zm2.356-2.356c-.651-.65-.651-1.706 0-2.357s1.706-.651 2.356 0c.651.651.651 1.706 0 2.357-.65.65-1.704.65-2.356 0zm-12.432 10.378l-.755-.755 4.34-4.323.755.755-4.34 4.323zm4.149 1.547l-.755-.755 3.029-3.054.755.755-3.029 3.054zm-5.035 2.138l-.755-.755 5.373-5.364.756.755-5.374 5.364zm21.083-14.291c-.188.618-.673 1.102-1.291 1.291.618.188 1.103.672 1.291 1.291.189-.619.673-1.103 1.291-1.291-.618-.188-1.102-.672-1.291-1.291zm-14.655-6.504c-.247.81-.881 1.443-1.69 1.69.81.247 1.443.881 1.69 1.69.248-.809.881-1.443 1.69-1.69-.81-.247-1.442-.88-1.69-1.69zm-1.827-3.205c-.199.649-.706 1.157-1.356 1.355.65.199 1.157.707 1.356 1.355.198-.649.706-1.157 1.354-1.355-.648-.198-1.155-.706-1.354-1.355zm5.387 0c-.316 1.035-1.127 1.846-2.163 2.163 1.036.316 1.847 1.126 2.163 2.163.316-1.036 1.127-1.846 2.162-2.163-1.035-.317-1.845-1.128-2.162-2.163zm11.095 13.64c-.316 1.036-1.127 1.846-2.163 2.163 1.036.316 1.847 1.162 2.163 2.197.316-1.036 1.127-1.881 2.162-2.197-1.035-.317-1.846-1.127-2.162-2.163z"/></svg>
                   </div>
-                  <h3 data-scroll data-scroll-speed="0.5" class="text-xl font-medium text-blue-gray-900">Sales</h3>
-                  <p class="mt-4 text-base text-blue-gray-500">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>
+                  <h3 data-scroll data-scroll-speed="0.5" class="text-gray-500 text-xl font-extrabold text-blue-gray-900 font-heading-font uppercase">Mission</h3>
+                  <p class="mt-4 text-base text-blue-gray-500 font-primary-font">
+                    This is our core ethos as a company. It’s our
+                    philosophy, our beliefs and our aspirations all in one.
+                    This is our trajectory and our daily guide for how we
+                    operate.
+                  </p>
                 </div>
-                <div data-scroll data-scroll-speed="0.5" class="p-6 bg-blue-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
-                  <a href="#" class="text-base font-medium text-blue-700 hover:text-blue-600">Contact us<span aria-hidden="true"> &rarr;</span></a>
-                </div>
+                
               </div>
 
-              <div class="flex flex-col bg-white rounded-2xl shadow-xl">
+              <div class="flex flex-col bg-white rounded-2xl shadow-2xl bg-gradient-to-r from-gray-50 to-gray-100">
                 <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8">
                   <div class="absolute top-0 p-5 inline-block bg-blue-600 rounded-xl shadow-lg transform -translate-y-1/2">
-                    <!-- Heroicon name: outline/support -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
+                    <svg class="h-9 w-9" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
                   </div>
-                  <h3 data-scroll data-scroll-speed="0.5" class="text-xl font-medium text-blue-gray-900">Technical Support</h3>
-                  <p class="mt-4 text-base text-blue-gray-500">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>
+                  <h3 data-scroll data-scroll-speed="0.5" class="text-xl font-extrabold font-heading-font text-gray-500 uppercase">Vision</h3>
+                  <p class="mt-4 text-base text-blue-gray-500 font-primary-font">
+                    This is what we aspire to do. It’s the goal out in front
+                    of us. It unites our focus and ambition as a business. It
+                    shapes our wider purpose and direction in the world.
+                  </p>
                 </div>
-                <div data-scroll data-scroll-speed="0.5" class="p-6 bg-blue-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
-                  <a href="#" class="text-base font-medium text-blue-700 hover:text-blue-600">Contact us<span aria-hidden="true"> &rarr;</span></a>
-                </div>
+                
               </div>
 
-              <div class="flex flex-col bg-white rounded-2xl shadow-xl">
+              <div class="flex flex-col bg-white rounded-2xl shadow-2xl bg-gradient-to-r from-gray-50 to-gray-100">
                 <div class="flex-1 relative pt-16 px-6 pb-8 md:px-8">
                   <div class="absolute top-0 p-5 inline-block bg-blue-600 rounded-xl shadow-lg transform -translate-y-1/2">
-                    <!-- Heroicon name: outline/newspaper -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                    </svg>
+                    <svg class="h-9 w-9" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M13.001 24.022h-2l-.001-19 1.016 1 .984-1 .001 19zm-2.78-8.387c-1.578-.51-3.142-.232-4.108.629-1.519 1.354-1.22 3.616-1.22 3.616s2.58.749 4.109-.614c1.458-1.3 1.219-3.457 1.219-3.631zm3.545 0c1.578-.51 3.142-.232 4.108.629 1.519 1.354 1.221 3.616 1.221 3.616s-2.58.749-4.109-.614c-1.459-1.3-1.219-3.457-1.22-3.631zm4.306-1.148c1.15-.969 2.559-1.271 3.664-.879 1.739.616 2.264 2.617 2.264 2.617s-1.91 1.513-3.66.893c-1.669-.592-2.208-2.485-2.268-2.631zm-12.144 0c-1.15-.969-2.559-1.271-3.664-.879-1.739.616-2.264 2.617-2.264 2.617s1.91 1.513 3.66.893c1.669-.592 2.208-2.485 2.268-2.631zm4.234-.035c.253-1.397-.162-2.693-1.003-3.414-1.322-1.134-3.207-.623-3.207-.623s-.341 2.274.99 3.416c1.269 1.089 3.072.64 3.22.621zm3.676 0c-.253-1.397.162-2.693 1.003-3.414 1.322-1.134 3.207-.623 3.207-.623s.341 2.274-.99 3.416c-1.269 1.089-3.072.64-3.22.621zm4.539-2.347c.42-1.21 1.32-2.045 2.3-2.24 1.542-.306 2.798.93 2.798.93s-.74 1.94-2.291 2.248c-1.481.295-2.699-.857-2.807-.938zm-12.754 0c-.42-1.21-1.32-2.045-2.3-2.24-1.542-.306-2.798.93-2.798.93s.74 1.94 2.291 2.248c1.481.295 2.699-.857 2.807-.938zm7.956-2.362c-.024-1.32.551-2.447 1.43-2.983 1.382-.843 3.036-.093 3.036-.093s-.027 2.139-1.419 2.987c-1.327.81-2.915.128-3.047.089zm-3.158 0c.024-1.32-.551-2.447-1.43-2.983-1.382-.843-3.036-.093-3.036-.093s.027 2.139 1.419 2.987c1.327.81 2.915.128 3.047.089zm-4.788-.5c.075-1.165-.386-2.184-1.14-2.694-1.187-.802-2.678-.207-2.678-.207s-.065 1.89 1.129 2.697c1.14.77 2.57.233 2.689.204zm12.734 0c-.075-1.165.386-2.184 1.14-2.694 1.187-.802 2.678-.207 2.678-.207s.065 1.89-1.129 2.697c-1.14.77-2.57.233-2.689.204zm-4.158-2.955c-.569-1.104-.553-2.293-.034-3.111.816-1.287 2.524-1.341 2.524-1.341s.866 1.815.045 3.11c-.784 1.236-2.407 1.321-2.535 1.342zm-4.418 0c.569-1.104.553-2.293.034-3.111-.816-1.287-2.524-1.341-2.524-1.341s-.866 1.815-.045 3.11c.784 1.236 2.407 1.321 2.535 1.342zm-2.992-.292c.063-.981-.325-1.838-.96-2.268-.998-.675-2.254-.174-2.254-.174s-.054 1.591.951 2.27c.959.648 2.163.197 2.263.172zm10.402 0c-.063-.981.325-1.838.96-2.268.998-.675 2.254-.174 2.254-.174s.054 1.591-.951 2.27c-.959.648-2.163.197-2.263.172zm-5.162-1.057c-.995-.667-1.538-1.679-1.482-2.612.088-1.467 1.504-2.31 1.504-2.31s1.58 1.128 1.492 2.605c-.085 1.408-1.415 2.238-1.514 2.317z"/></svg>
                   </div>
-                  <h3 data-scroll data-scroll-speed="0.5" class="text-xl font-medium text-blue-gray-900">Media Inquiries</h3>
-                  <p class="mt-4 text-base text-blue-gray-500">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>
+                  <h3 data-scroll data-scroll-speed="0.5" class="text-gray-500 text-xl font-extrabold font-heading-font text-blue-gray-900 uppercase">Core Values</h3>
+                  <p class="mt-4 text-base text-blue-gray-500 font-primary-font">
+                    Our entire methodology is centered on speed, loyalty to our customers and most importantly; honoring marketing goals.
+                    These values
+                    drive our business and keep it on track.
+                  </p>
                 </div>
-                <div data-scroll data-scroll-speed="0.5" class="p-6 bg-blue-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
-                  <a href="#" class="text-base font-medium text-blue-700 hover:text-blue-600">Contact us<span aria-hidden="true"> &rarr;</span></a>
-                </div>
+                
               </div>
 
             </div>
