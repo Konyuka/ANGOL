@@ -17,6 +17,8 @@
          
         </div>
 
+
+
         <div class="relative mt-24 max-w-md mx-auto px-4 pb-32 sm:max-w-3xl sm:px-6 md:mt-32 lg:max-w-7xl lg:px-8">
           <h1 data-scroll data-scroll-speed="1"  class="font-heading-font text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">About ANGOL</h1>
           <p data-scroll data-scroll-speed="2"  class="font-primary-font mt-6 max-w-3xl text-xl text-white">
@@ -321,7 +323,12 @@ export default {
     // Footer
   },
   setup(props) {
-    console.log(props.showNavbar)
+    if (localStorage.getItem('reloaded')) {
+        localStorage.removeItem('reloaded');
+        } else {
+            localStorage.setItem('reloaded', '1');
+            location.reload();
+        }
     
     const initY = ref('')
     const showNavbar = ref(true)
@@ -339,7 +346,8 @@ export default {
         scroll.on('scroll', (e) => {
             initY.value = e.scroll.y
         });
-        console.log(scroll)
+
+         
     })
 
 
@@ -363,6 +371,10 @@ export default {
       scroll.scrollTo(target);
     }
 
+    const reload = () => {
+      
+    }
+
     return {
       scroll,
       check,
@@ -370,6 +382,7 @@ export default {
       showNavbar,
       initY,
       propValue,
+      reload
 
     }
     

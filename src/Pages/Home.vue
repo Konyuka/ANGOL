@@ -375,6 +375,13 @@ export default {
     const showNavbar = ref(true)
     const propValue = ref('This is the prop value')
 
+    if (localStorage.getItem('reloaded')) {
+        localStorage.removeItem('reloaded');
+        } else {
+            localStorage.setItem('reloaded', '1');
+            location.reload();
+        }
+
     watch(initY, () => {
       onScroll() 
     } )
@@ -387,7 +394,7 @@ export default {
         scroll.on('scroll', (e) => {
             initY.value = e.scroll.y
         });
-        console.log(scroll)
+        
     })
 
 
