@@ -1,11 +1,11 @@
 <template>
 
- <div class="bg-gradient-to-r from-gray-100 to-gray-200"  data-scroll-container>
+ <div class="overflow-visible bg-gradient-to-r from-gray-100 to-gray-200"  data-scroll-container>
    <Header class="z-20 transition duration-700 ease-in-out transform hover:translate-y-1 motion-reduce:transition-none motion-reduce:transform-none" />
 
     <div class="bg-gradient-to-r from-gray-100 to-gray-200">
       <header class="relative pb-36 bg-blue-gray-800">
-        <div class="absolute inset-0">
+        <div data-scroll data-scroll-speed="1" class="absolute inset-0">
           <img class="w-full h-full object-fit" src="/src/assets/img/bg.jpg" alt="">
           <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-indigo-800 to-cyan-600 mix-blend-multiply"></div>
           <!-- <div class="absolute inset-0 bg-blue-gray-800 mix-blend-multiply" aria-hidden="true"></div> -->
@@ -149,7 +149,7 @@
         </div>
 
         <!-- CTA Section -->
-        <section class="relative bg-white" aria-labelledby="join-heading">
+        <section class="relative bg-gradient-to-r from-gray-100 to-gray-200" aria-labelledby="join-heading">
           <div class="hidden absolute inset-x-0 h-1/2 bg-blue-gray-50 lg:block" aria-hidden="true"></div>
           <div class="max-w-7xl mx-auto bg-blue-600 lg:bg-transparent lg:px-8">
             <div class="lg:grid lg:grid-cols-12">
@@ -194,24 +194,24 @@
         <!-- Newsletter Section -->
         <section class="max-w-md mx-auto py-24 px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:py-32 lg:px-8 lg:flex lg:items-center" aria-labelledby="newsletter-heading">
           <div class="lg:w-0 lg:flex-1">
-            <h2 class="text-3xl font-extrabold text-blue-gray-900 sm:text-4xl" id="newsletter-heading">
+            <h2 class="font-heading-font text-3xl font-extrabold text-blue-gray-900 sm:text-4xl" id="newsletter-heading">
               Sign up for our newsletter
             </h2>
-            <p class="mt-3 max-w-3xl text-lg text-blue-gray-500">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
+            <p class="font-primary-font mt-3 max-w-3xl text-lg text-blue-gray-500">
+              To get latest updates on products and discounts
             </p>
           </div>
           <div class="mt-8 lg:mt-0 lg:ml-8">
             <form class="sm:flex">
               <label for="email-address" class="sr-only">Email address</label>
-              <input id="email-address" name="email-address" type="email" autocomplete="email" required class="w-full px-5 py-3 border border-blue-gray-300 shadow-sm placeholder-blue-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:max-w-xs rounded-md" placeholder="Enter your email">
+              <input id="email-address" name="email-address" type="email" autocomplete="email" required class="font-primary-font w-full px-5 py-3 border border-blue-gray-300 shadow-sm placeholder-blue-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:max-w-xs rounded-md" placeholder="Enter your email">
               <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <button type="submit" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <button type="submit" class="font-heading-font font-extrabold  w-full flex items-center justify-center px-5 py-3 border border-transparent text-base rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                   Notify me
                 </button>
               </div>
             </form>
-            <p class="mt-3 text-sm text-blue-gray-500">
+            <p class="font-primary-font mt-3 text-sm text-blue-gray-500">
               We care about the protection of your data. Read our
               <a href="#" class="font-medium underline">
                 Privacy Policy.

@@ -72,21 +72,24 @@
     </div>
 
     <nav class="hidden lg:py-4 lg:flex lg:space-x-8" aria-label="Global">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="/" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 font-heading-font text-black hover:text-white rounded-md py-1 px-3 inline-flex items-center text-xl font-bold " aria-current="page">
+      <!-- <router-link to="/"> -->
+      <a  href="/" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 font-heading-font text-black hover:text-white rounded-md py-1 px-3 inline-flex items-center text-xl font-bold " aria-current="page">
         <i class="fas fa-home mr-2"></i>
         Home
       </a>
+      <!-- </router-link> -->
 
       <a href="" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
         <i class="fas fa-briefcase mr-2"></i>
         Services
       </a>
 
-      <a href="/about" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
+      <!-- <router-link to="/about"> -->
+      <a  href="/about" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
         <i class="fas fa-question-circle mr-2"></i>
         About
       </a>
+      <!-- </router-link> -->
 
       <a href="#" class="transform transition hover:scale-125 duration-700 ease-in-out hover:animate-pulse bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-300 hover:to-purple-500 text-black hover:text-white font-heading-font hover:bg-gradient-to-r rounded-md py-1 px-3 inline-flex items-center text-xl font-bold ">
         <i class="fas fa-envelope-open-text mr-2"></i>

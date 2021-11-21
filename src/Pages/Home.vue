@@ -1,6 +1,6 @@
 <template>
 
-<div class="bg-white" data-scroll-container>
+<div class="bg-gradient-to-r from-gray-100 to-gray-200 overflow-hidden" data-scroll-container>
   <Header :propValue="propValue" :showNavbar="showNavbar" class="transition duration-700 ease-in-out transform hover:translate-y-1 motion-reduce:transition-none motion-reduce:transform-none" />
 
   <div class="relative overflow-hidden mt-14">
@@ -233,7 +233,7 @@
             <p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
               Tech into Media & Branding
             </p>
-            <p class="mt-3 text-lg text-gray-300">
+            <p class="mt-3 text-lg text-gray-300 font-primary-font ">
               ANGOL MEDIA is a provider of advertising and media services headquarted in Nairobi, Kenya with a presence in Kigali, Rwanda. We help clients in
               promoting and marketing of products through our advertising services. Our campaigns deliver media impressions on high penetration, high velocity,
               perimeter items such as FMCG, boxtops, shopping bags.
@@ -241,7 +241,7 @@
             <div class="mt-8">
               <div class="inline-flex rounded-md shadow">
                 <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
-                  Check Out More Projects
+                  Recent Projects
                   <!-- Heroicon name: solid/external-link -->
                   <svg class="-mr-1 ml-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
