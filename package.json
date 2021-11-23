@@ -1,6 +1,10 @@
 {
   "name": "angol",
   "version": "0.0.0",
+  "engines": {
+    "node": "14.17.3",
+    "npm": "7.22.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
