@@ -9,12 +9,15 @@
     <main class="overflow-hidden">
         <!-- Header -->
         <div class="bg-warm-gray-50">
-        <div class="py-24 lg:py-32">
+        <div class="py-24 lg:py-24">
             <div class="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
             <h1 class="font-heading-font text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">Get in touch</h1>
             <p class="font-primary-font mt-6 text-xl text-warm-gray-500 max-w-3xl">
                 Let's work together... <br>
                 Creating experiences that will graduate your brand from bland to buzzworty
+            </p>
+            <p class="mt-5 font-heading-font"> 
+              We normaly reply back in less than 24Hours Monday to Friday
             </p>
             </div>
         </div>
@@ -162,7 +165,7 @@
                     </div>
                     </div>
                     <div class="sm:col-span-2 sm:flex sm:justify-end">
-                    <button type="submit" class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-cyan-500 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 sm:w-auto">
+                    <button type="submit" class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-500 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 sm:w-auto">
                         Submit
                     </button>
                     </div>
@@ -174,60 +177,42 @@
         </section>
 
         <!-- Contact grid -->
-        <section aria-labelledby="offices-heading">
+        <section aria-labelledby="offices-heading font-primary-font">
         <div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-            <h2 id="offices-heading" class="text-3xl font-extrabold text-warm-gray-900">Our offices</h2>
-            <p class="mt-6 text-lg text-warm-gray-500 max-w-3xl">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>
+            <h2 id="offices-heading" class="text-3xl font-extrabold text-warm-gray-900 font-heading-font">Our offices</h2>
             <div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
             <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Los Angeles</h3>
+                <h3 class="text-lg font-medium text-warm-gray-900">Kenya</h3>
                 <p class="mt-2 text-base text-warm-gray-500">
                 <span class="block">4556 Brendan Ferry</span>
 
-                <span class="block">Los Angeles, CA 90210</span>
+                <span class="block">Nairobi</span>
                 </p>
             </div>
 
             <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">New York</h3>
+                <h3 class="text-lg font-medium text-warm-gray-900">Rwanda</h3>
                 <p class="mt-2 text-base text-warm-gray-500">
                 <span class="block">886 Walter Streets</span>
 
-                <span class="block">New York, NY 12345</span>
+                <span class="block">Kigali</span>
                 </p>
             </div>
-
-            <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Toronto</h3>
-                <p class="mt-2 text-base text-warm-gray-500">
-                <span class="block">7363 Cynthia Pass</span>
-
-                <span class="block">Toronto, ON N3Y 4H8</span>
-                </p>
-            </div>
-
-            <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">London</h3>
-                <p class="mt-2 text-base text-warm-gray-500">
-                <span class="block">114 Cobble Lane</span>
-
-                <span class="block">London N1 2EF</span>
-                </p>
-            </div>
+           
             </div>
         </div>
         </section>
     </main>
 
     
-    <footer id="foota" class="pb-2 bg-gradient-to-r from-gray-100 to-gray-200" aria-labelledby="footer-heading">
+    <footer id="foota" class="font-primary-font pb-2 bg-gradient-to-r from-gray-100 to-gray-200" aria-labelledby="footer-heading">
       <h2 id="footer-heading" class="sr-only">Footer</h2>
       <div class="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div class="space-y-8 xl:col-span-1">
             <img data-scroll data-scroll-speed="1" data class="h-10" src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg" alt="Company name">
             <p class="text-gray-500 text-base">
-              Making the world a better place through constructing elegant hierarchies.
+              Grow your brand
             </p>
             <div class="flex space-x-6">
               <a data-scroll data-scroll-speed="1" href="#" class="text-gray-400 hover:text-gray-500">

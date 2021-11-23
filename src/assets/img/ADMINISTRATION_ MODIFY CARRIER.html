@@ -1,0 +1,486 @@
+
+<!-- saved from url=(0040)http://192.168.100.19/vicidial/admin.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- VERSION: 2.14-832a   BUILD: 211027-1031   ADD: 441111111111   PHP_SELF: /vicidial/admin.php-->
+<meta name="ROBOTS" content="NONE">
+<meta name="COPYRIGHT" content="© 2021 ViciDial Group">
+<meta name="AUTHOR" content="ViciDial Group">
+<script language="JavaScript" src="./ADMINISTRATION_ MODIFY CARRIER_files/calendar_db.js.download"></script>
+<script language="JavaScript" src="./ADMINISTRATION_ MODIFY CARRIER_files/help.js.download"></script>
+</head><body bgcolor="white" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0"><div id="HelpDisplayDiv" class="help_info" style="display:none;"></div><link rel="stylesheet" href="./ADMINISTRATION_ MODIFY CARRIER_files/calendar.css">
+<link rel="stylesheet" type="text/css" href="./ADMINISTRATION_ MODIFY CARRIER_files/vicidial_stylesheet.php">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+
+<title>ADMINISTRATION: MODIFY CARRIER</title>
+<script language="Javascript">
+var field_name = '';
+var user = 'msaiba';
+var epoch = '1637588108';
+
+	
+	var weak = new Image();
+	weak.src = "images/weak.png";
+	var medium = new Image();
+	medium.src = "images/medium.png";
+	var strong = new Image();
+	strong.src = "images/strong.png";
+
+	function pwdChanged(pwd_field_str, pwd_img_str, pwd_len_field, pwd_len_min) 
+		{
+		var pwd_field = document.getElementById(pwd_field_str);
+		var pwd_field_value = pwd_field.value;
+		var pwd_img = document.getElementById(pwd_img_str);
+		var pwd_len = pwd_field_value.length
+
+	//	var strong_regex = new RegExp( "^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])", "g" );
+	//	var medium_regex = new RegExp( "^(?=.{6,})(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9]))).*$", "g" );
+		var strong_regex = new RegExp( "^(?=.{20,})(?=.*[a-zA-Z])(?=.*[0-9])", "g" );
+		var medium_regex = new RegExp( "^(?=.{10,})(?=.*[a-zA-Z])(?=.*[0-9])", "g" );
+
+		if (strong_regex.test(pwd_field.value) ) 
+			{
+			if (pwd_img.src != strong.src)
+				{pwd_img.src = strong.src;}
+			} 
+		else if (medium_regex.test( pwd_field.value) ) 
+			{
+			if (pwd_img.src != medium.src) 
+				{pwd_img.src = medium.src;}
+			}
+		else 
+			{
+			if (pwd_img.src != weak.src) 
+				{pwd_img.src = weak.src;}
+			}
+		if ( (pwd_len_min > 0) && (pwd_len_min > pwd_len) )
+			{document.getElementById(pwd_len_field).innerHTML = "<font color=red><b>" + pwd_len + "</b></font>";}
+		else
+			{document.getElementById(pwd_len_field).innerHTML = "<font color=black><b>" + pwd_len + "</b></font>";}
+		}
+
+	function openNewWindow(url) 
+		{
+		window.open (url,"",'width=620,height=300,scrollbars=yes,menubar=yes,address=yes');
+		}
+	function scriptInsertField() 
+		{
+		openField = '--A--';
+		closeField = '--B--';
+		var textBox = document.scriptForm.script_text;
+		var scriptIndex = document.getElementById("selectedField").selectedIndex;
+		var insValue =  document.getElementById('selectedField').options[scriptIndex].value;
+		if (document.selection) 
+			{
+			//IE
+			textBox = document.scriptForm.script_text;
+			insValue = document.scriptForm.selectedField.options[document.scriptForm.selectedField.selectedIndex].text;
+			textBox.focus();
+			sel = document.selection.createRange();
+			sel.text = openField + insValue + closeField;
+			} 
+		else if (textBox.selectionStart || textBox.selectionStart == 0) 
+			{
+			//Mozilla
+			var startPos = textBox.selectionStart;
+			var endPos = textBox.selectionEnd;
+			textBox.value = textBox.value.substring(0, startPos)
+			+ openField + insValue + closeField
+			+ textBox.value.substring(endPos, textBox.value.length);
+			}
+		else 
+			{
+			textBox.value += openField + insValue + closeField;
+			}
+		}
+
+		var pass = 'a8tyfour';
+
+	mouseY=0;
+	function getMousePos(event) {
+		mouseY=event.pageY;
+	}
+	document.addEventListener("click", getMousePos);
+
+	function launch_chooser(fieldname,stage)
+		{
+
+		var h = window.innerHeight;		
+		var vposition=mouseY;
+
+		var audiolistURL = "./non_agent_api.php";
+		var audiolistQuery = "source=admin&function=sounds_list&user=" + user + "&pass=" + pass + "&format=selectframe&stage=" + stage + "&comments=" + fieldname;
+		var Iframe_content = '<IFRAME SRC="' + audiolistURL + '?' + audiolistQuery + '"  style="width:740;height:440;background-color:white;" scrolling="NO" frameborder="0" allowtransparency="true" id="audio_chooser_frame' + epoch + '" name="audio_chooser_frame" width="740" height="460" STYLE="z-index:2"> </IFRAME>';
+
+		document.getElementById("audio_chooser_span").style.position = "absolute";
+		document.getElementById("audio_chooser_span").style.left = "220px";
+		document.getElementById("audio_chooser_span").style.top = vposition + "px";
+		document.getElementById("audio_chooser_span").style.visibility = 'visible';
+		document.getElementById("audio_chooser_span").innerHTML = Iframe_content;
+		}
+
+	function launch_moh_chooser(fieldname,stage)
+		{
+
+		var h = window.innerHeight;		
+		var vposition=mouseY;
+
+		var audiolistURL = "./non_agent_api.php";
+		var audiolistQuery = "source=admin&function=moh_list&user=" + user + "&pass=" + pass + "&format=selectframe&stage=" + stage + "&comments=" + fieldname;
+		var Iframe_content = '<IFRAME SRC="' + audiolistURL + '?' + audiolistQuery + '"  style="width:740;height:440;background-color:white;" scrolling="NO" frameborder="0" allowtransparency="true" id="audio_chooser_frame' + epoch + '" name="audio_chooser_frame" width="740" height="460" STYLE="z-index:2"> </IFRAME>';
+
+		document.getElementById("audio_chooser_span").style.position = "absolute";
+		document.getElementById("audio_chooser_span").style.left = "220px";
+		document.getElementById("audio_chooser_span").style.top = vposition + "px";
+		document.getElementById("audio_chooser_span").style.visibility = 'visible';
+		document.getElementById("audio_chooser_span").innerHTML = Iframe_content;
+		}
+
+	function launch_vm_chooser(fieldname,stage)
+		{
+
+		var h = window.innerHeight;		
+		var vposition=mouseY;
+
+		var audiolistURL = "./non_agent_api.php";
+		var audiolistQuery = "source=admin&function=vm_list&user=" + user + "&pass=" + pass + "&format=selectframe&stage=" + stage + "&comments=" + fieldname;
+		var Iframe_content = '<IFRAME SRC="' + audiolistURL + '?' + audiolistQuery + '"  style="width:740;height:440;background-color:white;" scrolling="NO" frameborder="0" allowtransparency="true" id="audio_chooser_frame' + epoch + '" name="audio_chooser_frame" width="740" height="460" STYLE="z-index:2"> </IFRAME>';
+
+		document.getElementById("audio_chooser_span").style.position = "absolute";
+		document.getElementById("audio_chooser_span").style.left = "220px";
+		document.getElementById("audio_chooser_span").style.top = vposition + "px";
+		document.getElementById("audio_chooser_span").style.visibility = 'visible';
+		document.getElementById("audio_chooser_span").innerHTML = Iframe_content;
+		}
+
+	function close_chooser()
+		{
+		document.getElementById("audio_chooser_span").style.visibility = 'hidden';
+		document.getElementById("audio_chooser_span").innerHTML = '';
+		}
+
+	function user_submit()
+		{
+		var user_field = document.getElementById("user");
+		user_field.disabled = false;
+		document.userform.submit();
+		}
+
+	function play_browser_sound(temp_element,temp_volume)
+		{
+		var taskIndex = document.getElementById(temp_element).selectedIndex;
+		var taskValue = document.getElementById(temp_element).options[taskIndex].value;
+		var temp_selected_element = 'BAS_' + taskValue;
+		if ( (taskValue != '---NONE---') && (taskValue != '---DISABLED---') && (taskValue != '') )
+			{
+			var temp_audio = document.getElementById(temp_selected_element);
+			var taskVolIndex = document.getElementById(temp_volume).selectedIndex;
+			var taskVolValue = document.getElementById(temp_volume).options[taskVolIndex].value;
+			var temp_js_volume = (taskVolValue * .01);
+			temp_audio.volume = temp_js_volume;
+		//	alert(temp_selected_element + ' ' + temp_js_volume);
+			temp_audio.play();
+			}
+		}
+	</script>
+
+<style type="text/css">
+<!--
+
+
+
+.auraltext
+	{
+	position: absolute;
+	font-size: 0;
+	left: -1000px;
+	}
+.chart_td
+	{background-image: url(images/gridline58.gif); background-repeat: repeat-x; background-position: left top; border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; padding:0; border-bottom: 1px solid #e5e5e5; background-color:transparent;}
+
+.head_style
+	{
+	background-color: 015B91;
+	}
+.head_style:hover{background-color: #262626;}
+
+.head_style_selected
+	{
+	background-color: A3C3D6;
+	}
+.head_style_selected:hover{background-color: A3C3D6;}
+
+.subhead_style
+	{
+	background-color: #E6E6E6;
+	}
+.subhead_style:hover{background-color: white;}
+
+.subhead_style_selected
+	{
+	background-color: #C6C6C6;
+	}
+.subhead_style_selected:hover{background-color: #C6C6C6;}
+
+.adminmenu_style_selected
+	{
+	background-color: white;
+	}
+.adminmenu_style_selected:hover{background-color: #E6E6E6;}
+
+.records_list_x
+	{
+	background-color: #B9CBFD;
+	}
+.records_list_x:hover{background-color: #E6E6E6;}
+
+.records_list_y
+	{
+	background-color: #9BB9FB;
+	}
+.records_list_y:hover{background-color: #E6E6E6;}
+
+
+.horiz_line
+	{
+	height: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #E6E6E6;
+	font-size: 1px;
+	}
+.horiz_line_grey
+	{
+	height: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9E9E9E;
+	font-size: 1px;
+	}
+
+.sub_sub_head_links
+	{
+	font-family:HELVETICA;
+	font-size:11;
+	color:BLACK;
+	}
+
+-->
+
+</style>
+
+
+
+<!-- INTERNATIONALIZATION-LINKS-PLACEHOLDER-VICIDIAL -->
+<center>
+
+<table bgcolor="white" cellpadding="0" cellspacing="0">
+<!-- BEGIN SIDEBAR NAVIGATION -->
+<tbody><tr><td valign="TOP" width="170" bgcolor="#015B91" align="CENTER">
+<a href="http://192.168.100.19/vicidial/admin.php"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/vicidial_admin_web_logo.gif" width="170" height="45" border="0" alt="System logo"></a>
+<b><font face="ARIAL,HELVETICA" color="white">ADMINISTRATION</font></b><br>
+
+	<table cellpadding="2" cellspacing="0" bgcolor="#015B91" width="160">
+		<!-- REPORTS NAVIGATION -->
+	<tbody><tr width="160"><td><div class="horiz_line"></div></td></tr>
+	<tr bgcolor="#015B91" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=999999&#39;;"><td align="LEFT" class="head_style">
+	<a href="http://192.168.100.19/vicidial/admin.php?ADD=999999" style="text-decoration:none;"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_reports.png" border="0" alt="Reports" width="14" height="14" valign="middle"> <font style="font-family:HELVETICA;font-size:12;color:WHITE"> Reports </font></a><font style="font-family:HELVETICA;font-size:12;color:WHITE">
+	</font></td></tr>
+
+	<!-- USERS NAVIGATION -->
+	<tr width="100%"><td><div class="horiz_line"></div></td></tr>
+	<tr width="160" bgcolor="#015B91" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=0A&#39;;"><td align="LEFT" class="head_style" width="160">
+	<a href="http://192.168.100.19/vicidial/admin.php?ADD=0A" style="text-decoration:none;"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_users.png" border="0" alt="Users" width="14" height="14" valign="middle"> <font style="font-family:HELVETICA;font-size:12;color:WHITE">Users</font></a><font style="font-family:HELVETICA;font-size:12;color:WHITE">
+	</font></td></tr>
+		<!-- CAMPAIGNS NAVIGATION -->
+	<tr width="160"><td><div class="horiz_line"></div></td></tr>
+	<tr bgcolor="#015B91" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=10&#39;;"><td align="LEFT" class="head_style">
+	<a href="http://192.168.100.19/vicidial/admin.php?ADD=10" style="text-decoration:none;"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_campaigns.png" border="0" alt="Campaigns" width="14" height="14" valign="middle"> <font style="font-family:HELVETICA;font-size:12;color:WHITE">Campaigns</font></a><font style="font-family:HELVETICA;font-size:12;color:WHITE">
+	</font></td></tr>
+		<!-- LISTS NAVIGATION -->
+			<tr width="160"><td><div class="horiz_line"></div></td></tr>
+		<tr bgcolor="#015B91" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=100&#39;;"><td align="LEFT" class="head_style"><a href="http://192.168.100.19/vicidial/admin.php?ADD=100" style="text-decoration:none;"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_lists.png" border="0" alt="Lists" width="14" height="14" valign="middle"> <font style="font-family:HELVETICA;font-size:12;color:WHITE">Lists</font></a></td></tr>
+			<!-- SCRIPTS NAVIGATION -->
+	<tr width="160"><td><div class="horiz_line"></div></td></tr>
+	<tr bgcolor="#015B91" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=1000000&#39;;"><td align="LEFT" class="head_style">
+	<a href="http://192.168.100.19/vicidial/admin.php?ADD=1000000" style="text-decoration:none;"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_scripts.png" border="0" alt="Scripts" width="14" height="14" valign="middle"> <font style="font-family:HELVETICA;font-size:12;color:WHITE"> Scripts </font></a><font style="font-family:HELVETICA;font-size:12;color:WHITE">
+	</font></td></tr>
+		<!-- FILTERS NAVIGATION -->
+			<tr width="160"><td><div class="horiz_line"></div></td></tr>
+		<tr bgcolor="#015B91" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=10000000&#39;;"><td align="LEFT" class="head_style"><a href="http://192.168.100.19/vicidial/admin.php?ADD=10000000" style="text-decoration:none;"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_filters.png" border="0" alt="Filters" width="14" height="14" valign="middle"> <font style="font-family:HELVETICA;font-size:12;color:WHITE"> Filters </font></a></td></tr>
+			<!-- INGROUPS NAVIGATION -->
+	<tr width="160"><td><div class="horiz_line"></div></td></tr>
+	<tr bgcolor="#015B91" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=1001&#39;;"><td align="LEFT" class="head_style">
+	<a href="http://192.168.100.19/vicidial/admin.php?ADD=1001" style="text-decoration:none;"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_inbound.png" border="0" alt="Inbound" width="14" height="14" valign="middle"> <font style="font-family:HELVETICA;font-size:12;color:WHITE"> Inbound </font></a><font style="font-family:HELVETICA;font-size:12;color:WHITE">
+	</font></td></tr>
+		<!-- USERGROUPS NAVIGATION -->
+	<tr width="160"><td><div class="horiz_line"></div></td></tr>
+	<tr bgcolor="#015B91" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=100000&#39;;"><td align="LEFT" class="head_style">
+	<a href="http://192.168.100.19/vicidial/admin.php?ADD=100000" style="text-decoration:none;"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_usergroups.png" border="0" alt="User Groups" width="14" height="14" valign="middle"> <font style="font-family:HELVETICA;font-size:12;color:WHITE"> User Groups </font></a><font style="font-family:HELVETICA;font-size:12;color:WHITE">
+	</font></td></tr>
+		<!-- REMOTEAGENTS NAVIGATION -->
+	<tr width="160"><td><div class="horiz_line"></div></td></tr>
+	<tr bgcolor="#015B91" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=10000&#39;;"><td align="LEFT" class="head_style">
+	<a href="http://192.168.100.19/vicidial/admin.php?ADD=10000" style="text-decoration:none;"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_remoteagents.png" border="0" alt="Remote Agents" width="14" height="14" valign="middle"> <font style="font-family:HELVETICA;font-size:12;color:WHITE"> Remote Agents </font></a><font style="font-family:HELVETICA;font-size:12;color:WHITE">
+	</font></td></tr>
+		<!-- ADMIN NAVIGATION -->
+	<tr width="160"><td><div class="horiz_line"></div></td></tr>
+	<tr bgcolor="#015B91" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=999998&#39;;"><td align="LEFT" class="head_style_selected">
+	<a href="http://192.168.100.19/vicidial/admin.php?ADD=999998" style="text-decoration:none;"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_black_admin.png" border="0" alt="Admin" width="14" height="14" valign="middle"> <font style="font-family:HELVETICA;font-size:12;color:BLACK"><b> Admin </b></font></a><font style="font-family:HELVETICA;font-size:12;color:BLACK"><b>
+	</b></font></td></tr>
+			<tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=100000000&#39;;">
+		<td align="LEFT" class="subhead_style" colspan="2"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=100000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_calltimes.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Call Times </font></a></td>
+		</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=130000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=130000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_shifts.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Shifts </font></a></td>
+		</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=10000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=10000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_phones.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Phones </font></a></td>
+		</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=130000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=130000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_templates.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Templates </font></a></td>
+		</tr><tr class="subhead_style_selected" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=140000000000&#39;;"><td align="LEFT" class="subhead_style_selected"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=140000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_carriers.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Carriers </font></a></td>
+		</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=100000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=100000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_servers.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Servers </font></a></td>
+		</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=1000000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=1000000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_conferences.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Conferences </font></a></td>
+		</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=311111111111111&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=311111111111111" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_settings.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> System Settings </font></a></td>
+		</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=180000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=180000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_screenlabels.png" border="0" alt="\&quot;Labels\&quot;" width="14" height="14" valign="middle"> Screen Labels </font></a></td>
+		</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=182000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=182000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_screencolors.png" border="0" alt="\&quot;Colors\&quot;" width="14" height="14" valign="middle"> Screen Colors </font></a></td>
+		</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=321111111111111&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=321111111111111" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_statuses.png" border="0" alt="\&quot;Statuses\&quot;" width="14" height="14" valign="middle"> System Statuses </font></a></td>
+		</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=193000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=193000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_statusgroups.png" border="0" alt="\&quot;Status" groups\"="" width="14" height="14" valign="middle"> Status Groups </font></a></td>
+				</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=196000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=196000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_cidgroups.png" border="0" alt="\&quot;CID" groups\"="" width="14" height="14" valign="middle"> CID Groups </font></a></td>
+				</tr><tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=170000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=170000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_voicemail.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Voicemail </font></a></td>
+		</tr>
+					<tr class="subhead_style" onclick="window.document.location=&#39;audio_store.php&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+			<a href="http://192.168.100.19/vicidial/audio_store.php" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_audiostore.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Audio Store </font></a></td>
+			</tr>
+			<tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=160000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+			<a href="http://192.168.100.19/vicidial/admin.php?ADD=160000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_musiconhold.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Music On Hold </font></a></td>
+			</tr>
+						<tr class="subhead_style" onclick="window.document.location=&#39;admin.php?ADD=197000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+			<a href="http://192.168.100.19/vicidial/admin.php?ADD=197000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_vm_messages.png" border="0" alt="\&quot;VM" message="" groups\"="" width="14" height="14" valign="middle"> VM Message Groups </font></a></td>
+			</tr>
+
+				<tr class="subhead_style" onclick="window.document.location=&#39;/vicidial/admin.php?ADD=192000000000&#39;;"><td align="LEFT" class="subhead_style"> &nbsp; 
+		<a href="http://192.168.100.19/vicidial/admin.php?ADD=192000000000" style="text-decoration:none;"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; <img src="./ADMINISTRATION_ MODIFY CARRIER_files/icon_settingscontainer.png" border="0" alt="\&quot;Users\&quot;" width="14" height="14" valign="middle"> Settings Containers </font></a></td>
+		</tr>
+			<tr width="160"><td><div class="horiz_line"></div></td></tr>
+	</tbody></table>
+	<br>&nbsp;
+</td><td valign="TOP" width="770" bgcolor="#D9E6FE">
+<!-- END SIDEBAR NAVIGATION -->
+
+<span style="position:absolute;left:300px;top:30px;z-index:1;visibility:hidden;" id="audio_chooser_span">
+
+</span>
+
+<table bgcolor="#D9E6FE" cellpadding="2" cellspacing="0" width="770" height="15">
+<tbody><tr bgcolor="#015B91"><td align="LEFT" bgcolor="#015B91"><font face="ARIAL,HELVETICA" color="WHITE" size="2"><b><a href="http://192.168.100.19/vicidial/welcome.php" style="text-decoration:none;"><font face="ARIAL,HELVETICA" color="WHITE" size="1">HOME</font></a><font face="ARIAL,HELVETICA" color="WHITE" size="1"> | <a href="http://192.168.100.19/agc/timeclock.php?referrer=admin" style="text-decoration:none;"><font face="ARIAL,HELVETICA" color="WHITE" size="1"> Timeclock</font></a><font face="ARIAL,HELVETICA" color="WHITE" size="1"> | <a href="http://192.168.100.19/vicidial/manager_chat_interface.php" style="text-decoration:none;"><font face="ARIAL,HELVETICA" color="WHITE" size="1"> Chat</font></a><font face="ARIAL,HELVETICA" color="WHITE" size="1"> | <a href="http://192.168.100.19/vicidial/admin.php?force_logout=1" style="text-decoration:none;"><font face="ARIAL,HELVETICA" color="WHITE" size="1">Logout</font></a><font face="ARIAL,HELVETICA" color="WHITE" size="1"> <font face="ARIAL,HELVETICA" color="WHITE" size="1">(msaiba)</font>
+
+
+</font></font></font></font></b></font></td><td align="RIGHT"><font face="ARIAL,HELVETICA" color="WHITE" size="2"><b>Monday November 22, 2021 16:35:08 PM &nbsp; </b></font></td></tr>
+
+<tr bgcolor="#015B91">
+
+
+
+
+
+
+
+</tr>
+		<tr bgcolor="#C6C6C6"><td align="LEFT" colspan="2"> &nbsp; <a href="http://192.168.100.19/vicidial/admin.php?ADD=140000000000"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> Show Carriers </font></a><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; | &nbsp; <a href="http://192.168.100.19/vicidial/admin.php?ADD=141111111111"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> Add A New Carrier </font></a><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> &nbsp; | &nbsp; <a href="http://192.168.100.19/vicidial/admin.php?ADD=140111111111"><font style="font-family:HELVETICA;font-size:11;color:BLACK;"> Copy A Carrier </font></a></font></font></td></tr>
+	<tr><td align="LEFT" colspan="2" height="2" bgcolor="#015B91"></td></tr>
+<tr><td align="LEFT" colspan="2">
+<font face="ARIAL,HELVETICA" color="BLACK" size="2"><br>CARRIER MODIFIED: SIP
+<table><tbody><tr><td>
+<font face="ARIAL,HELVETICA" color="BLACK" size="2"><br>MODIFY A CARRIER RECORD: SIP</font><form action="http://192.168.100.19/vicidial/admin.php" method="POST"><font face="ARIAL,HELVETICA" color="BLACK" size="2">
+<input type="hidden" name="ADD" value="441111111111">
+<input type="hidden" name="carrier_id" value="SIP">
+<center><table width="750" cellspacing="3">
+<tbody><tr bgcolor="#B6D3FC"><td align="right">Carrier ID: </td><td align="left"><b>SIP</b></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right">Carrier Name: </td><td align="left"><input type="text" name="carrier_name" size="40" maxlength="50" value="Sip Line"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-carrier_name&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right">Carrier Description: </td><td align="left"><input type="text" name="carrier_description" size="70" maxlength="255" value=""><img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-carrier_description&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right">Admin User Group: </td><td align="left"><select size="1" name="user_group">
+<option value="---ALL---">All Admin User Groups</option>
+<option value="ADMIN">ADMIN - VICIDIAL ADMINISTRATORS</option>
+<option selected="" value="---ALL---">---ALL---</option>
+</select><img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-user_group&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right">Registration String: </td><td align="left"><input type="text" name="registration_string" size="50" maxlength="255" value=""><img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-registration_string&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right"><a href="http://192.168.100.19/vicidial/admin.php?ADD=331111111111&amp;template_id=--NONE--">Template ID</a>: </td><td align="left"><select size="1" name="template_id">
+<option value="--NONE--" selected="">--NONE--</option><option value="IAX_generic">IAX_generic - IAX phone generic</option>
+<option value="SIP_generic">SIP_generic - SIP phone generic</option>
+<option value="webRTC">webRTC - VICIphone</option>
+<option selected="" value="--NONE--">--NONE--</option>
+</select><img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-template_id&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right">Account Entry: </td><td align="left"><textarea name="account_entry" rows="10" cols="70">[SIP]
+disallow=all
+allow=gsm
+allow=ulaw
+allow=alaw
+insecure=port,invite 
+type=peer
+dtmfmode=rfc2833
+qualify=yes
+nat=yes
+host=10.70.46.229</textarea> <img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-account_entry&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right">Protocol: </td><td align="left"><select size="1" name="protocol"><option>SIP</option><option>Zap</option><option>IAX2</option><option value="EXTERNAL">EXTERNAL</option><option selected="" value="SIP">SIP</option></select><img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-protocol&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right">Globals String: </td><td align="left"><input type="text" name="globals_string" size="50" maxlength="255" value="TESTSIPTRUNK = SIP/SIP"><img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-globals_string&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right">Dialplan Entry: </td><td align="left"><textarea name="dialplan_entry" rows="10" cols="70">exten =&gt; _1.,1,AGI(agi://127.0.0.1:4577/call_log)
+exten =&gt; _1.,n,Set(CALLERID(num)=+254111048200) 
+exten =&gt; _1.,n,Dial(SIP/0${EXTEN}@SIP)
+exten =&gt; _1.,n,Hangup
+
+exten =&gt; _10.,1,AGI(agi://127.0.0.1:4577/call_log)
+exten =&gt; _10.,n,Set(CALLERID(num)=+254111048200) 
+exten =&gt; _10.,n,Dial(SIP/${EXTEN:1}@SIP)
+exten =&gt; _10.,n,Hangup
+
+exten =&gt; _1254.,1,AGI(agi://127.0.0.1:4577/call_log)
+exten =&gt; _1254.,n,Set(CALLERID(num)=+254111048200)
+exten =&gt; _1254.,n,Dial(SIP/+${EXTEN}@SIP)
+exten =&gt; _1254.,n,Hangup
+</textarea> <img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-dialplan_entry&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right">Server IP: </td><td align="left"><select size="1" name="server_ip">
+<option value="192.168.100.19">192.168.100.19 - Server vicibox81 - 62.8.79.167 - Y - Y</option>
+<option value="0.0.0.0">0.0.0.0 - ALL SERVERS</option>
+<option selected="">192.168.100.19</option>
+</select> <i>(0.0.0.0 is all servers)</i><img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-server_ip&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="right">Active: </td><td align="left"><select size="1" name="active"><option value="Y">Y</option><option value="N">N</option><option value="Y" selected="">Y</option></select><img src="./ADMINISTRATION_ MODIFY CARRIER_files/help.png" onclick="FillAndShowHelpDiv(event, &#39;#server_carriers-active&#39;)" width="20" height="20" border="0" alt="HELP" align="TOP"></td></tr>
+<tr bgcolor="#B6D3FC"><td align="center" colspan="2"><input style="background-color:#EFEFEF" type="submit" name="submit" value="SUBMIT" <="" td=""></td></tr>
+</tbody></table></center>
+</font><center><font face="ARIAL,HELVETICA" color="BLACK" size="2"><b>
+<br><br><a href="http://192.168.100.19/vicidial/admin.php?ADD=541111111111&amp;carrier_id=SIP&amp;carrier_name=Sip%20Line">DELETE THIS CARRIER</a>
+<br><br><a href="http://192.168.100.19/vicidial/admin.php?ADD=720000000000000&amp;category=CARRIERS&amp;stage=SIP">Click here to see Admin changes to this carrier</a></b></font><b><a href="http://192.168.100.19/vicidial/admin.php?ADD=720000000000000&amp;category=CARRIERS&amp;stage=SIP">
+</a></b></center></form></td></tr></tbody></table>
+</font></td></tr></tbody></table>
+</td></tr>
+<tr><td bgcolor="#015B91" align="CENTER">
+<font style="font-family:HELVETICA;font-size:9;color:white;"><br><br><!-- RUNTIME: 0 seconds<BR> -->VERSION: 2.14-832a<br>BUILD: 211027-1031
+<br><a href="http://192.168.100.19/vicidial/admin.php?ADD=999995"><font color="white">© 2021 ViciDial Group</font></a><br><img src="./ADMINISTRATION_ MODIFY CARRIER_files/pixel.gif"></font>
+
+</td><td bgcolor="#D9E6FE">
+</td></tr></tbody></table><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><table>
+
+<script language="Javascript">
+if (!window.A_TCALSIDX)
+	{
+	if (document.addEventListener)
+		window.removeEventListener('scroll', f_tcalHideAll);
+	if (window.attachEvent)
+		window.detachEvent('onscroll', f_tcalHideAll);
+	}
+</script>
+
+
+
+
+
+
+</table></center></body></html>

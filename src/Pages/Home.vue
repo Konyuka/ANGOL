@@ -47,8 +47,8 @@
       <!-- Feature section with grid -->
       <section data-scroll-section id="services" >
       <div class="relative bg-gradient-to-r from-gray-100 to-gray-200 py-16 sm:py-24 lg:py-2">
-        <div data-scroll data-scroll-speed="4" class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-          <h2 data-scroll data-scroll-speed="2" class="font-heading-font font-extrabold  tracking-wider uppercase text-7xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-800 to-gray-400">Our Services</h2>
+        <div data-scroll data-scroll-speed="2" class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+          <h2 data-scroll data-scroll-speed="1" class="font-heading-font font-extrabold  tracking-wider uppercase text-7xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-800 to-gray-400">Our Services</h2>
           <!-- <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
             Everything you need to deploy your app
           </p> -->
@@ -260,7 +260,7 @@
       </section>
 
       <!-- This example requires Tailwind CSS v2.0+ -->
-      <section data-scroll-section  class="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
+      <section data-scroll-section  class="py-12 bg-gradient-to-r from-gray-100 to-gray-200 overflow-hidden md:py-20 lg:py-24">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <svg data-scroll data-scroll-speed="4" class="absolute top-full right-full transform translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" role="img" aria-labelledby="svg-workcation">
             <title id="svg-workcation">Workcation</title>
@@ -272,7 +272,7 @@
             <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
           </svg>
 
-          <div  class="relative">
+          <div  class="relative ">
             <img data-scroll data-scroll-speed="4" class="mx-auto h-8" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600-mark-gray-800-and-indigo-600-text.svg" alt="Workcation">
             <blockquote class="mt-10">
               <div data-scroll data-scroll-speed="2" class="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
@@ -300,15 +300,16 @@
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p class="relative">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.
+                  The team at ANGOL have LITERALLY brought my vision to life and I could not be more thankful for the talent they have put into this project. 
+                  From the get-go, the team has given me the most divine experience...
                 </p>
               </div>
-              <footer data-scroll data-scroll-speed="2" class="mt-8">
+              <footer data-scroll data-scroll-speed="1" class="mt-8">
                 <div class="flex items-start">
                   
                   <div class="ml-4">
-                    <div class="text-base font-medium text-white">Reviewer Name</div>
-                    <div class="text-base font-medium text-indigo-200">CEO, Tuple</div>
+                    <div class="text-base font-medium text-white">Brian Maina</div>
+                    <div class="text-base font-medium text-indigo-200">CEO, Mich Digital</div>
                   </div>
                 </div>
               </footer>
@@ -325,15 +326,16 @@
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p class="relative">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis. Nemo expedita voluptas culpa sapiente alias molestiae.
+                  They took a dated and neglected website with minimal branding and social media promotion and 
+                  created an industry best! This was a creation of something that we’ve been dreaming about for years to take our branding to the next level
                 </p>
               </div>
               <footer class="mt-8">
                 <div class="flex items-start">
                   
                   <div class="ml-4">
-                    <div class="text-base font-medium text-white">Reviewer Name</div>
-                    <div class="text-base font-medium text-indigo-200">CEO, Workcation</div>
+                    <div class="text-base font-medium text-white">Jane Madafu</div>
+                    <div class="text-base font-medium text-indigo-200">HR, Cycle Links</div>
                   </div>
                 </div>
               </footer>

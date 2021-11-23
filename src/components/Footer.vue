@@ -1,11 +1,11 @@
 <template>
-  <footer id="foota" class="pb-44   bg-gradient-to-r from-gray-100 to-gray-200" aria-labelledby="footer-heading">
+  <footer id="foota" class="pb-8   bg-gradient-to-r from-gray-100 to-gray-200" aria-labelledby="footer-heading">
       <h2 id="footer-heading" class="sr-only">Footer</h2>
       <div data-scroll data-scroll-speed="4" class="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div class="space-y-8 xl:col-span-1">
             <img  data class="h-10" src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg" alt="Company name">
-            <p class="text-gray-500 text-base">
+            <p class="text-gray-500 text-base font-primary-font">
               Making the world a better place through constructing elegant hierarchies.
             </p>
             <div class="flex space-x-6">
@@ -36,7 +36,7 @@
           <div data-scroll data-scroll-speed="2" class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
             <div class="md:grid md:grid-cols-2 md:gap-8">
             
-              <div class="mt-12 md:mt-0">
+              <div class="mt-12 md:mt-0 font-primary-font">
                 <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                   Support
                 </h3>
@@ -54,7 +54,7 @@
                   </li>
 
                   <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                    <a href="/profile.pdf" download class="text-base text-gray-500 hover:text-gray-900">
                       Profile
                     </a>
                   </li>
@@ -65,7 +65,7 @@
           </div>
         </div>
 
-        <div  class="mt-8 border-t border-gray-200 py-8 flex justify-between">
+        <div  class="font-primary-font mt-8 border-t border-gray-200 py-8 flex justify-between">
           <p class="text-base text-gray-400 xl:text-center">
             &copy; 2020 ANGOL, Inc. All rights reserved.
           </p>
@@ -78,7 +78,15 @@
 </template>
 
 <script>
+
 export default {
   name: 'theFooter',
+  setup() {
+    // const item = {title: 'Upload Template', loc: require('../assets/profile.pdf')}
+
+    return {
+      // item
+    }
+  }
 }
 </script>

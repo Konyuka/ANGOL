@@ -43,6 +43,7 @@
                   </div>
                   <h3 data-scroll data-scroll-speed="0.5" class="text-gray-500 text-xl font-extrabold text-blue-gray-900 font-heading-font uppercase">Mission</h3>
                   <p class="mt-4 text-base text-blue-gray-500 font-primary-font">
+                    We strive to Understand, deliver and satisfy the needs of our clients.
                     This is our core ethos as a company. It’s our
                     philosophy, our beliefs and our aspirations all in one.
                     This is our trajectory and our daily guide for how we
@@ -59,6 +60,11 @@
                   </div>
                   <h3 data-scroll data-scroll-speed="0.5" class="text-xl font-extrabold font-heading-font text-gray-500 uppercase">Vision</h3>
                   <p class="mt-4 text-base text-blue-gray-500 font-primary-font">
+                    A society defined by trust
+                    and confidence in public
+                    institutions and a belief in
+                    people to build their own
+                    futures.
                     This is what we aspire to do. It’s the goal out in front
                     of us. It unites our focus and ambition as a business. It
                     shapes our wider purpose and direction in the world.
@@ -74,7 +80,7 @@
                   </div>
                   <h3 data-scroll data-scroll-speed="0.5" class="text-gray-500 text-xl font-extrabold font-heading-font text-blue-gray-900 uppercase">Core Values</h3>
                   <p class="mt-4 text-base text-blue-gray-500 font-primary-font">
-                    Our entire methodology is centered on speed, loyalty to our customers and most importantly; honoring marketing goals.
+                    Our entire methodology is centered on speed, loyalty to our customers, team work and evident results and while at it; honoring marketing goals.
                     These values
                     drive our business and keep it on track.
                   </p>
@@ -86,63 +92,64 @@
           </section>
 
           <!-- FAQ -->
-          <section class="max-w-md mx-auto py-24 px-4 divide-y-2 divide-blue-gray-200 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:py-32 lg:px-8" aria-labelledby="faq-heading">
+          <section class="font-primary-font max-w-md mx-auto py-24 px-4 divide-y-2 divide-blue-gray-200 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:py-32 lg:px-8" aria-labelledby="faq-heading">
             <h2 class="text-3xl font-extrabold text-blue-gray-900" id="faq-heading">
               Frequently asked questions
             </h2>
             <div class="mt-6 pt-10">
               <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12">
                 <div>
-                  <dt class="text-lg font-medium text-blue-gray-900">
-                    What&#039;s the best thing about Switzerland?
+                  <dt class="font-heading-font text-lg font-medium text-blue-gray-900">
+                    What is a brand and what are the advantages of having one?
                   </dt>
                   <dd class="mt-2 text-base text-blue-gray-500">
-                    I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    A brand is a set of characteristics - or an identity - that is easily recognisable and which enhances the reputation of your products or services.
                   </dd>
                 </div>
 
                 <div>
-                  <dt class="text-lg font-medium text-blue-gray-900">
-                    Why do you never see elephants hiding in trees?
+                  <dt class="font-heading-font text-lg font-medium text-blue-gray-900">
+                    Why do we need to develop a brand?
                   </dt>
                   <dd class="mt-2 text-base text-blue-gray-500">
-                    Because they&#039;re so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    The brand is your ambassador and advocate, attracting customers and reassuring them. At the same time, it will help to bring in a flow of new customers.
                   </dd>
                 </div>
 
                 <div>
-                  <dt class="text-lg font-medium text-blue-gray-900">
-                    How do you make holy water?
+                  <dt class="font-heading-font text-lg font-medium text-blue-gray-900">
+                    How long does it take to build a brand?
                   </dt>
                   <dd class="mt-2 text-base text-blue-gray-500">
-                    You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    It will probably take you years to build up a widely-recognised brand - the sooner you start the better.
+                    That's why we are here to help you build up a brand faster and effectively.
                   </dd>
                 </div>
 
                 <div>
-                  <dt class="text-lg font-medium text-blue-gray-900">
-                    Why can&#039;t you hear a pterodactyl go to the bathroom?
+                  <dt class="font-heading-font text-lg font-medium text-blue-gray-900">
+                    How can I develop a brand on a small budget?
                   </dt>
                   <dd class="mt-2 text-base text-blue-gray-500">
-                    Because the pee is silent. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    Deciding on your values or what makes you special need not cost anything. However, communicating your brand message and style will inevitably require a budget commitment                      
                   </dd>
                 </div>
 
                 <div>
-                  <dt class="text-lg font-medium text-blue-gray-900">
-                    What do you call someone with no body and no nose?
+                  <dt class="font-heading-font text-lg font-medium text-blue-gray-900">
+                    Will I need to register my brand name as a trade mark?
                   </dt>
                   <dd class="mt-2 text-base text-blue-gray-500">
-                    Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    Registration is not essential. But it will help in any future dispute if your trade mark is registered with the Trade Marks Registry
                   </dd>
                 </div>
 
                 <div>
-                  <dt class="text-lg font-medium text-blue-gray-900">
-                    Why did the invisible man turn down the job offer?
+                  <dt class="font-heading-font text-lg font-medium text-blue-gray-900">
+                    How far can I stretch my brand to cover new products or services?
                   </dt>
                   <dd class="mt-2 text-base text-blue-gray-500">
-                    He couldn&#039;t see himself doing it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    A brand name can be stretched to cover new products or services, but only if the same brand values are appropriate to the new additions.
                   </dd>
                 </div>
               </dl>
@@ -159,7 +166,7 @@
                 <div class="absolute inset-x-0 h-1/2 bg-blue-gray-50 lg:hidden" aria-hidden="true"></div>
                 <div class="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
                   <div class="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
-                    <img class="object-cover object-center rounded-3xl shadow-2xl" src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80" alt="">
+                    <img class="object-cover object-center rounded-3xl shadow-2xl" src="../assets/img/team.jpg" alt="">
                   </div>
                 </div>
               </div>
@@ -184,8 +191,13 @@
                   </svg>
                 </div>
                 <div class="relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6">
-                  <h2 class="text-3xl font-extrabold text-white" id="join-heading">Join our team</h2>
-                  <p class="text-lg text-white">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>
+                  <h2 class="text-3xl font-extrabold text-white font-heading-font" id="join-heading">Join our team</h2>
+                  <p class="text-lg text-white font-primary-font">
+                    None of us, including me, ever do great things. <br>
+                    But we can all do small things, with great love, and together we can do something wonderful.
+                    If you can't beat the beatles; why not join them. <br> <br>
+                    ANGOL is a platform where your creative and innovative thinking will put you in a class all your own which no one else can compare.
+                  </p>
                   <a class="block w-full py-3 px-5 text-center bg-white border border-transparent rounded-md shadow-md text-base font-medium text-blue-700 hover:bg-blue-gray-50 sm:inline-block sm:w-auto" href="#">Explore open positions</a>
                 </div>
               </div>
@@ -209,7 +221,7 @@
               <input id="email-address" name="email-address" type="email" autocomplete="email" required class="font-primary-font w-full px-5 py-3 border border-blue-gray-300 shadow-sm placeholder-blue-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:max-w-xs rounded-md" placeholder="Enter your email">
               <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button type="submit" class="font-heading-font font-extrabold  w-full flex items-center justify-center px-5 py-3 border border-transparent text-base rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                  Notify me
+                  Notify me <span class="ml-2 fas fa-paper-plane"></span>
                 </button>
               </div>
             </form>
@@ -225,14 +237,14 @@
 
       </main>
 
-      <footer id="foota" class="pb-2 bg-gradient-to-r from-gray-100 to-gray-200" aria-labelledby="footer-heading">
+      <footer id="foota" class="font-primary-font pb-2 bg-gradient-to-r from-gray-100 to-gray-200" aria-labelledby="footer-heading">
       <h2 id="footer-heading" class="sr-only">Footer</h2>
       <div class="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div class="space-y-8 xl:col-span-1">
             <img data-scroll data-scroll-speed="1" data class="h-10" src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg" alt="Company name">
             <p class="text-gray-500 text-base">
-              Making the world a better place through constructing elegant hierarchies.
+              Grow your brand
             </p>
             <div class="flex space-x-6">
               <a data-scroll data-scroll-speed="1" href="#" class="text-gray-400 hover:text-gray-500">
