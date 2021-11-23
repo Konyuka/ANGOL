@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview":"vite preview --port 8005",
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
