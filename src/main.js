@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
 import './locomotive.css'
-import router from "./Router"
+import router from "./Router/index"
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
